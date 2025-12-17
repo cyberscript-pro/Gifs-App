@@ -4,7 +4,7 @@ import PreviousSearches from "./gifs/components/PreviousSearches";
 import GifsList from "./gifs/components/GifsList";
 import useGifs from "./gifs/hooks/useGifs";
 
-const GifsApp = () => {
+export const GifsApp = () => {
   const { gifs, previousTerms, handleTermClicked, handleSearch } = useGifs();
 
   return (
@@ -24,5 +24,3 @@ const GifsApp = () => {
     </div>
   );
 };
-
-export default GifsApp;
