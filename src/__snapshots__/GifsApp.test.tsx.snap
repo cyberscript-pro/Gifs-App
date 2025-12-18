@@ -26,6 +26,7 @@ exports[`GifsApp > should render components properly 1`] = `
         class="w-full max-w-xs p-2.5 border border-solid border-[#ccc] rounded-md text-lg text-[#333] bg-white"
         placeholder="Buscar gifs"
         type="text"
+        value=""
       />
       <button
         class="p-2.5 border border-solid border-[#ccc] rounded-md text-lg text-white bg-black cursor-pointer transition-colors duration-300 ease-in-out hover:bg-[#333]"

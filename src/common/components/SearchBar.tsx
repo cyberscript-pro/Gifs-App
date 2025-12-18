@@ -1,11 +1,14 @@
 import { useEffect, useState, type FC } from "react";
 
 interface SearchBarProps {
-  placeholder: string;
+  placeholder?: string;
   onQuery: (query: string) => void;
 }
 
-export const SearchBar: FC<SearchBarProps> = ({ placeholder, onQuery }) => {
+export const SearchBar: FC<SearchBarProps> = ({
+  placeholder = "Buscar",
+  onQuery,
+}) => {
   const [query, setQuery] = useState("");
 
   useEffect(() => {
@@ -33,6 +36,7 @@ export const SearchBar: FC<SearchBarProps> = ({ placeholder, onQuery }) => {
       <input
         className="w-full max-w-xs p-2.5 border border-solid border-[#ccc] rounded-md text-lg text-[#333] bg-white"
         type="text"
+        value={query}
         placeholder={placeholder}
         onChange={(event) => setQuery(event.target.value)}
         onKeyDown={handleKeyDown}
